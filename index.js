@@ -1,11 +1,7 @@
 const express = require('express');
 const app = express();
+const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send("Essa é a primeira rota criada com o express");
-});
+app.get('/', (req, res) => res.send('Olá Mundo pelo Express'));
 
-
-app.listen(3000, () => {
-    console.log("Servidor Rolando...");
-});
+app.listen(port, () => console.log(`Api rodando na porta ${port}`));
